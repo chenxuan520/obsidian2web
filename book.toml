@@ -1,0 +1,17 @@
+[book]
+authors = ["chenxuan"]
+language = "zh"
+multilingual = false
+src = "src"
+title = "chenxuan'blog"
+description= "chenxuan'blog"
+
+[output.html]
+# defaulr dark theme
+default-theme = "navy"
+# for Chinese search
+additional-js = ["assets/fzf.umd.js", "assets/elasticlunr.js", "assets/reference.js", "assets/highlight.js", "theme/pagetoc.js"]
+additional-css = ["assets/utils.css", "theme/pagetoc.css"]
+# set for github icon
+git-repository-url = "https://gitee.com/chenxuan520/blog.androidftp.top"
+git-repository-icon = "fa-github"
