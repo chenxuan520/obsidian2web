@@ -4,6 +4,7 @@ mkdir src
 
 cp ~/file/github/obsidian/readme.md ./src/README.md
 echo -e "\n---\n## Update Time\n- last update in `date`" >> ./src/README.md
+echo -e "\n- Power by [mdbook](https://hellowac.github.io/mdbook-doc-zh/index.html)" >> ./src/README.md
 
 # choose one
 # vim ./src/SUMMARY.md -c ":for v in split(mdbook#MkbookFile('./src'),'\n')|call append(line('.')-1,v)|endfor" -c ":wq"
