@@ -20,7 +20,7 @@
 
 ## 导出obsidian
 
-- [obsidian-export](https://github.com/zoni/obsidian-export)(ps:最好使用我改进过后的[版本](https://github.com/chenxuan520/obsidian-export))
+- [obsidian-export](https://github.com/zoni/obsidian-export)(ps:最好使用我改进过后的[版本](https://github.com/chenxuan520/obsidian-export),修复了中文url跳转的bug问题)
 
 ## 中文搜索支持
 

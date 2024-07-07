@@ -1,7 +1,6 @@
 gowebquick
 src
 *.vim
-assets
 temp
 obsidian-export
 book
