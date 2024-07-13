@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# !! Don't run it ,it's for author create !!
+
 server_path="/root/service/book"
 server_bin="gowebquick"
 

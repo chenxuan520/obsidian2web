@@ -3,4 +3,5 @@ src
 *.vim
 temp
 obsidian-export
+.obsidian
 book

@@ -1,0 +1,59 @@
+name: build_and_release #名称随意
+on:
+  push: #设置触发规则
+    branches:
+      - main
+      - master
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code #这部分是为了从github自动clone代码
+        uses: actions/checkout@v4
+      - name: Install build tools #这部分是安装依赖,不过看着办的
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential curl tar
+          ./init.sh
+      - name: Run Build Assert #需要执行的命令
+        run: |
+          curl https://raw.githubusercontent.com/chenxuan520/gh-action-shell/main/git_commit_message_from_last_tag.sh | bash 1>commit-message.log 2>/dev/null
+          ./create.sh ./example
+          tar -zcvf book.tar.gz ./book
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./book
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          body_path: commit-message.log
+          files: |
+            LICENSE
+            book.tar.gz
+
+  # Deploy job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
+
+
+

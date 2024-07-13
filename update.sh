@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# !! Don't run it ,it's for author create !!
+
 mkdir src
 ./obsidian-export ~/file/github/obsidian/技术 ./src --no-recursive-embeds
 
