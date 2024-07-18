@@ -1,7 +1,8 @@
 # obsidian2web
 ## Author
 - **chenxuan**
-> ![](http://cdn.androidftp.top/pic/chenxuanweb/dog.png)
+
+- ![](http://cdn.androidftp.top/pic/chenxuanweb/dog.png)
 ## 仓库地址
 - [GitHub - chenxuan520/obsidian2web: A tool to quickly convert obsidian repositories into web pages](https://github.com/chenxuan520/obsidian2web)
 - 对应github网页 [README - chenxuan'blog](https://chenxuan520.github.io/obsidian2web/)
@@ -10,7 +11,7 @@
 - 使用 [mdbook](https://github.com/rust-lang/mdBook) 和 [obsidian-export](https://github.com/zoni/obsidian-export) 加上 github的cicd和page实现,并且进行优化,[优化参考](./info/feature.md)
 - 需要有一定的git和github的使用基础
 ## Quick Start
-### 教程
+### 视频教程
 
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1856089767&bvid=BV1yW421R7iC&cid=1614183558&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
