@@ -39,6 +39,9 @@ def createBook(file, tab, path):
                 continue
 
             base = path+name
+            # 将空格转义为 %20
+            base = base.replace(" ", "%20")
+
             result = result+tab+"- ["+temp+"]("+base+")\n"
 
 
