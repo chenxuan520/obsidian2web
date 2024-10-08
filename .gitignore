@@ -3,5 +3,6 @@ src
 *.vim
 temp
 obsidian-export
+mdbook
 .obsidian
 book
