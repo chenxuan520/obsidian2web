@@ -15,3 +15,5 @@ additional-css = ["assets/utils.css", "theme/pagetoc.css"]
 # set for github icon
 git-repository-url = "https://github.com/chenxuan520/obsidian2web"
 git-repository-icon = "fa-github"
+# set open math support
+mathjax-support = true

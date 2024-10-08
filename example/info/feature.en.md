@@ -23,3 +23,5 @@
 
 > [!important] Quotation syntax recognition
 > Similar to this type
+
+- Math formula support, similar to $$a^2=b^2+c^2$$
