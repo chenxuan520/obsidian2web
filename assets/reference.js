@@ -6,21 +6,22 @@ var blockquotes = document.querySelectorAll('blockquote');
 var infoRegex = /\[!(\w+)\]\x20*(.*)/g;
 
 // 遍历每个 <blockquote> 元素
-blockquotes.forEach(function(blockquote) {
+blockquotes.forEach(function (blockquote) {
     // 获取该 <blockquote> 元素内的所有 <p> 元素
     var paragraphs = blockquote.querySelectorAll('p');
 
     // 遍历每个 <p> 元素
-    paragraphs.forEach(function(paragraph) {
+    paragraphs.forEach(function (paragraph) {
         // 获取原始文本内容
-        var originalText = paragraph.textContent;
+        var originalText = paragraph.innerHTML;
+        console.log(originalText)
 
         // 判断是否是特殊语法
         var match;
         while ((match = infoRegex.exec(originalText)) !== null) {
             // 匹配到了 [!info] 语法
             var infoContent = match[2]; // 获取匹配到的内容
-            var infoHTML = "<strong>"+match[1]+" "+infoContent+"</strong>"; // 转换成对应的 HTML 格式
+            var infoHTML = "<strong>" + match[1] + " " + infoContent + "</strong>"; // 转换成对应的 HTML 格式
             originalText = originalText.replace(match[0], infoHTML); // 将匹配到的 Markdown 替换成 HTML 格式
             console.log(match);
         }
