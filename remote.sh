@@ -2,8 +2,8 @@
 
 # !! Don't run it ,it's for author create !!
 
-server_path="/root/service/book"
-server_bin="gowebquick"
+server_path="/root/web/blog"
+server_name="aliyun2"
 
 tar_name="book.tar.gz"
 
@@ -14,10 +14,9 @@ fi
 tar -zcvf $tar_name ./book
 
 # for remote
-ssh huaweiyun "mkdir $server_path;rm -rf $server_path/book*"
-scp ./$tar_name huaweiyun:$server_path
-ssh huaweiyun "cd $server_path;tar -zxvf ./$tar_name"
-ssh huaweiyun "killall $server_bin;cd $server_path;nohup ./$server_bin >./nohup 2>&1 &"
+ssh aliyun2 "mkdir $server_path;rm -rf $server_path/book*"
+scp ./$tar_name aliyun2:$server_path
+ssh aliyun2 "cd $server_path;tar -zxvf ./$tar_name"
 
 # clean
 rm $tar_name
