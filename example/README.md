@@ -42,13 +42,13 @@
 
 ### 现有仓库需要使用
 
-- 参考 [cppdocs](https://github.com/chenxuan520/cppdocs/blob/main/.github/workflows/docs.yml)
+- 参考 [cppnet](https://github.com/chenxuan520/cppnet/blob/master/.github/workflows/docs.yml)
 
 1. 将这个仓库作为 submodule 添加
 
 2. cicd 中拉取时候携带 submodule 一起拉取
 
-3. 和上面相似步骤, 但是需要自己编写cicd文件, [cicd文件参考](https://github.com/chenxuan520/cppdocs/blob/main/.github/workflows/docs.yml)
+3. 和上面相似步骤, 但是需要自己编写cicd文件, [cicd文件参考](https://github.com/chenxuan520/cppnet/blob/master/.github/workflows/docs.yml)
 
 ### 只需要生成静态文件,不需要部署
 > 这个仅适用于linux(因为作者是linux系统)

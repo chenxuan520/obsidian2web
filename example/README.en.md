@@ -42,13 +42,13 @@
 
 ### Repository in use
 
-- [cppdocs](https://github.com/chenxuan520/cppdocs/blob/main/.github/workflows/docs.yml) for reference
+- [cppnet](https://github.com/chenxuan520/cppnet/blob/master/.github/workflows/docs.yml) for reference
 
 1. Add this repository as a submodule
 
 2. Pull submodule along with repository in CI/CD
 
-3. Similar steps as above, but you need to write your own CI/CD file, [CI/CD file reference](https://github.com/chenxuan520/cppdocs/blob/main/.github/workflows/docs.yml)
+3. Similar steps as above, but you need to write your own CI/CD file, [CI/CD file reference](https://github.com/chenxuan520/cppnet/blob/master/.github/workflows/docs.yml)
 
 ### Only need to generate static files, no need to deploy
 > This is only applicable to linux (because the author is using a linux system)
